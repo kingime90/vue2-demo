@@ -6,12 +6,15 @@
 
 ``` bash
 # install dependencies
+# 安装依赖项
 npm install
 
 # serve with hot reload at localhost:8080
+# 运行开发
 npm run dev
 
 # build for production with minification
+# 运行构建
 npm run build
 
 # build for production and view the bundle analyzer report

@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import Home from '@/view/home/index'
+import Computer from '@/view/home/computer'
+import Phone from '@/view/home/phone'
+import Tablet from '@/view/home/tablet'
 import Simple from '@/view/simple/index'
 import Message from '@/view/simple/message'
 import VBind from '@/view/simple/vbind'
@@ -9,7 +13,7 @@ import VFor from '@/view/simple/vfor'
 import ReverseMessage from '@/view/simple/reverseMessage'
 import VModel from '@/view/simple/vmodel'
 
-Vue.use(Router)
+Vue.use(Router);;
 
 export default new Router({
   routes: [
@@ -17,6 +21,25 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/home',
+      name: 'Home',
+      component: Home,
+      children: [
+        {
+          path: "computer",
+          component: Computer
+        },
+        {
+          path: "phone",
+          component: Phone
+        },
+        {
+          path: "tablet",
+          component: Tablet
+        }
+      ]
     },
     {
       path: '/simple',

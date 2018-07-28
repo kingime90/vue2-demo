@@ -1,7 +1,7 @@
 <template>
   <div>
     <ol>
-      <li v-for="item in todos">{{item.text}}</li>
+      <li v-for="item in todos" v-bind:key="item.id">{{item.text}}</li>
     </ol>
   </div>
 </template>
@@ -11,10 +11,10 @@
     data() {
       return {
         todos: [
-          {text: '学习'},
-          {text: '听音乐'},
-          {text: '看电影'},
-          {text: '游戏'}
+          {id: '1', text: '学习'},
+          {id: '2', text: '听音乐'},
+          {id: '3', text: '看电影'},
+          {id: '4', text: '游戏'}
         ]
       }
     }

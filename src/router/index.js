@@ -12,8 +12,10 @@ import VIf from '@/view/simple/vif'
 import VFor from '@/view/simple/vfor'
 import ReverseMessage from '@/view/simple/reverseMessage'
 import VModel from '@/view/simple/vmodel'
+import Counter from '@/view/simple/counter'
 
-Vue.use(Router);;
+Vue.use(Router);
+;
 
 export default new Router({
   routes: [
@@ -75,6 +77,11 @@ export default new Router({
       path: '/vmodel',
       name: 'VModel',
       component: VModel
+    },
+    {
+      path: '/counter',
+      name: 'Counter',
+      component: Counter
     }
   ]
 })
